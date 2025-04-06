@@ -30,17 +30,17 @@ export default function Home() {
             {
               title: "Premium White Sugar",
               producer: "Sweet Mills Ltd.",
-              image: "https://images.unsplash.com/photo-1581268497091-31132809fef6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80"
+              image: "1.jpeg"
             },
             {
               title: "Natural Brown Sugar",
               producer: "Organic Sugar Mills",
-              image: "https://images.unsplash.com/photo-1584473457793-99817725c9dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80"
+              image: "2.jpeg"
             },
             {
               title: "Premium Sugarcane",
               producer: "Local Farmers Collective",
-              image: "https://images.unsplash.com/photo-1627207785566-00a505799891?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80"
+              image: "3.jpeg"
             }
           ].map((item, index) => (
             <div key={index}>

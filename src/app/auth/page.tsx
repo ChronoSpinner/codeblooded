@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '@/firebase';
+import Link from 'next/link';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
@@ -98,7 +99,14 @@ export default function AuthPage() {
             </button>
           </div>
         </div>
+        
       </div>
+      <p className="mt-4 text-center text-gray-600">
+        Don't have an account?{' '}
+        <Link href="/signup" className="text-indigo-600 hover:text-indigo-500">
+          Sign up
+        </Link>
+      </p>
     </div>
   );
 }
