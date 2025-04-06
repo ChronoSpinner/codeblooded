@@ -1,6 +1,6 @@
 # 🚀 SugarMommy — AI-Driven Sugarcane Marketplace
 
-> Created by *Team CodeBlooded* during [Your Hackathon Name].  
+> Created by *Team CodeBlooded* during 418 Hackathon.  
 > Bridging the gap between 🌾 farmers, 🏭 sugar mills, and 🚚 distributors using AI-powered sugarcane quality prediction and real-time trading.
 
 🌐 **Live Website**: [https://codeblooded-xi.vercel.app/](https://codeblooded-xi.vercel.app/)
