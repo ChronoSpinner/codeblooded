@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 SugarMommy — AI-Driven Sugarcane Marketplace
 
-## Getting Started
+> Created by *Team CodeBlooded* during 418 Hackathon.  
+> Bridging the gap between 🌾 farmers, 🏭 sugar mills, and 🚚 distributors using AI-powered sugarcane quality prediction and real-time trading.
 
-First, run the development server:
+🌐 **Live Website**: [https://codeblooded-xi.vercel.app/](https://codeblooded-xi.vercel.app/)
+
+---
+
+## 🌟 About the Project
+
+In the sugar industry, farmers are often underpaid due to lack of quality measurement and transparency. **SugarMommy** solves this by:
+
+- 🤖 Predicting *sugar content* (TS%) using NIR spectroscopy and machine learning
+- 🔗 Connecting farmers, mills, and distributors under one seamless platform
+- 💸 Enabling *fair, dynamic pricing* based on quality — no middlemen, no friction
+- 📦 Providing *inventory and order management*
+
+---
+
+## ✨ Features
+
+### 🔬 For Farmers
+- Upload sugarcane data via CSV or web form  
+- Automated prediction of **Total Sugar (TS%)**  
+- Receive a **quality grade (A–E)** and **price recommendation**  
+- List sugarcane batches on the marketplace in real time  
+
+### 📈 For Buyers
+- Browse listings by:
+  - Quality Grade (A–E)
+  - Predicted TS%
+  - Price per ton
+- Buy directly from farmers  
+- View quantity and location before purchase  
+
+---
+
+## 🤖 Machine Learning
+
+### 🧠 ML Model Highlights
+- **Model**: Partial Least Squares Regression (PLS)
+- **Features**: 232 NIR wavelength amplitudes (900–1700 nm)
+- **Target**: Total Sugar (TS%)  
+- **Pre-processing**: Standardization + IQR outlier removal  
+- **Accuracy**: ~95% (R² Score)
+
+### 🎯 Sugarcane Quality Grades
+
+| Grade | TS% Range        |
+|-------|------------------|
+| A     | Above 41.69      |
+| B     | 34.24 – 41.69    |
+| C     | 17.4 – 34.24     |
+| D     | 4.76 – 17.4      |
+| E     | Below 4.76       |
+
+🔗 **Live Model**: [Try it on Hugging Face](https://huggingface.co/spaces/ChronoSpinner/SugarCane_Prediction_Model)  
+🌐 **Live Website**: [https://codeblooded-xi.vercel.app/](https://codeblooded-xi.vercel.app/)
+
+---
+
+## 🧩 Tech Stack
+
+| Layer       | Tech Used                     |
+|-------------|-------------------------------|
+| Frontend    | Next.js + TypeScript          |
+| Backend     | Firebase                      |
+| ML Inference| Scikit-learn (PLS Regression) |
+| ML UI       | Gradio                        |
+| Database    | Firestore                     |
+| Hosting     | Vercel                        |
+
+---
+
+## 🧪 Run Locally
+
+Clone the repo and install dependencies:
 
 ```bash
+git clone https://github.com/your-username/sugarmommy.git
+cd sugarmommy
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel Platform
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
