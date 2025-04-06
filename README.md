@@ -9,7 +9,7 @@
 
 ## 🌟 About the Project
 
-In the sugar industry, farmers are often underpaid due to lack of quality measurement and transparency. **SugarMommy** solves this by:
+In the sugar industry, farmers are often underpaid due to lack of quality measurement and transparency. **SugarMommy** solves this by
 
 - 🤖 Predicting *sugar content* (TS%) using NIR spectroscopy and machine learning
 - 🔗 Connecting farmers, mills, and distributors under one seamless platform
