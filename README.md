@@ -3,6 +3,8 @@
 > Created by *Team CodeBlooded* during [Your Hackathon Name].  
 > Bridging the gap between 🌾 farmers, 🏭 sugar mills, and 🚚 distributors using AI-powered sugarcane quality prediction and real-time trading.
 
+🌐 **Live Website**: [https://codeblooded-xi.vercel.app/](https://codeblooded-xi.vercel.app/)
+
 ---
 
 ## 🌟 About the Project
@@ -53,7 +55,8 @@ In the sugar industry, farmers are often underpaid due to lack of quality measur
 | D     | 4.76 – 17.4      |
 | E     | Below 4.76       |
 
-🔗 **Live Model**: [Try it on Hugging Face](https://huggingface.co/spaces/ChronoSpinner/SugarCane_Prediction_Model)
+🔗 **Live Model**: [Try it on Hugging Face](https://huggingface.co/spaces/ChronoSpinner/SugarCane_Prediction_Model)  
+🌐 **Live Website**: [https://codeblooded-xi.vercel.app/](https://codeblooded-xi.vercel.app/)
 
 ---
 
