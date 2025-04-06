@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '@/firebase';
+import Link from 'next/link';
 
 export default function SignupPage() {
   const [email, setEmail] = useState('');
@@ -35,7 +36,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md">
         <h2 className="text-center text-3xl font-extrabold text-gray-900">
           Create a new account
@@ -118,6 +119,12 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
+      <p className="mt-4 text-center text-gray-600">
+        Have an account?{' '}
+        <Link href="/auth/" className="text-indigo-600 hover:text-indigo-500">
+          Sign In
+        </Link>
+      </p>
     </div>
   );
 }

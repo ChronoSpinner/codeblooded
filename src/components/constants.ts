@@ -99,7 +99,7 @@ const MILL_PRODUCTS = [
 ];
 
 // Sample data for raw sugarcane from farmers
-const FARMER_PRODUCTS = [
+export const FARMER_PRODUCTS = [
     {
         id: "SC001",
         name: "Premium CO-86032 Sugarcane",
@@ -168,7 +168,7 @@ const FARMER_PRODUCTS = [
 
 
 // Sample data for past listings
-const SAMPLE_LISTINGS = [
+export const SAMPLE_LISTINGS = [
     {
         id: "12345",
         variety: "CO-86032",
@@ -206,7 +206,7 @@ const SAMPLE_LISTINGS = [
 
 
 // Monthly production data
-const MONTHLY_PRODUCTION = [
+export const MONTHLY_PRODUCTION = [
     { name: 'Jan', value: 32000 },
     { name: 'Feb', value: 38000 },
     { name: 'Mar', value: 45000 },
@@ -222,7 +222,7 @@ const MONTHLY_PRODUCTION = [
 ];
 
 // Product type distribution
-const PRODUCT_DISTRIBUTION = [
+export const PRODUCT_DISTRIBUTION = [
     { name: 'CO-86032', value: 35 },
     { name: 'CO-0238', value: 30 },
     { name: 'CO-118', value: 20 },
@@ -230,7 +230,7 @@ const PRODUCT_DISTRIBUTION = [
 ];
 
 // Monthly revenue data
-const MONTHLY_REVENUE = [
+export const MONTHLY_REVENUE = [
     { name: 'Jan', value: 1440000 },
     { name: 'Feb', value: 1750000 },
     { name: 'Mar', value: 2025000 },
@@ -248,7 +248,7 @@ const MONTHLY_REVENUE = [
 
 
 // Sample data for products
-const SAMPLE_PRODUCTS = [
+export const SAMPLE_PRODUCTS = [
     {
         id: "SP001",
         productName: "Premium White Sugar",

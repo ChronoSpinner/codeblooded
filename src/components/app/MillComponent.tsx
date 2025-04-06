@@ -47,6 +47,7 @@ import {
   Droplet,
   ShoppingBag
 } from 'lucide-react';
+import { MONTHLY_PRODUCTION, PRODUCT_DISTRIBUTION, MONTHLY_REVENUE } from '../constants';
 
 // Form schema for creating sugar product
 const formSchema = z.object({

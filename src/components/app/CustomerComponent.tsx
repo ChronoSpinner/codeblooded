@@ -349,8 +349,8 @@ const CustomerComponent = () => {
                 <Card key={product.id} className="overflow-hidden flex flex-col h-full">
                   <div className="aspect-square relative overflow-hidden bg-gray-100">
                     <img
-                      src={"https://th.bing.com/th/id/OIP.c7r42ZcdK0Vc3KwXfy4cpAHaHa?rs=1&pid=ImgDetMain"}
-                      alt={"https://th.bing.com/th/id/OIP.c7r42ZcdK0Vc3KwXfy4cpAHaHa?rs=1&pid=ImgDetMain"}
+                      src={"https://th.bing.com/th/id/OIP.JELyefbIbJNEBxA5ikK4VAHaDt?rs=1&pid=ImgDetMain"}
+                      alt={"https://th.bing.com/th/id/OIP.JELyefbIbJNEBxA5ikK4VAHaDt?rs=1&pid=ImgDetMain"}
                       className="object-cover w-full h-full transition-transform hover:scale-105"
                     />
                     <Badge className="absolute top-2 right-2 bg-white text-black">
@@ -405,8 +405,8 @@ const CustomerComponent = () => {
                 <Card key={product.id} className="overflow-hidden flex flex-col h-full">
                   <div className="aspect-square relative overflow-hidden bg-gray-100">
                     <img
-                      src={product.image}
-                      alt={product.name}
+                      src={"https://th.bing.com/th/id/OIP.c7r42ZcdK0Vc3KwXfy4cpAHaHa?rs=1&pid=ImgDetMain"}
+                      alt={"https://th.bing.com/th/id/OIP.c7r42ZcdK0Vc3KwXfy4cpAHaHa?rs=1&pid=ImgDetMain"}
                       className="object-cover w-full h-full transition-transform hover:scale-105"
                     />
                     <Badge className="absolute top-2 right-2 bg-white text-black">
