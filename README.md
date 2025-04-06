@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌾 Sugarcane Quality Marketplace
+An AI-powered web platform that enables farmers to upload sugarcane quality and quantity data, and allows buyers to purchase sugarcane based on its predicted grade and price. Built using React + JavaScript frontend, a database-backed backend, and a machine learning pipeline that analyses NIR spectroscopy data (900–1700 nm) to estimate sugar content.
 
-## Getting Started
+🛒 Key Features
+🔬 For Farmers
+Upload sugarcane data via CSV or form
 
-First, run the development server:
+Get automated prediction of Total Sugar (TS%)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Receive a quality grade and price recommendation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+List batches on the marketplace in real time
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📈 For Buyers
+Browse sugarcane lots by:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Quality Grade (A–D)
 
-## Learn More
+Predicted TS%
+Price per ton
+Buy directly from farmers
+View quantity and location before purchase
 
-To learn more about Next.js, take a look at the following resources:
+🤖 Machine Learning
+Uses NIR (Near-Infrared) spectroscopy features (900–1700 nm)
+Trained with Partial Least Squares Regression (PLS)
+Categorizes sugarcane into percentile-based grades
+Predicts price dynamically based on quality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧠 ML Model Highlights
+Huggingface link: https://huggingface.co/spaces/ChronoSpinner/SugarCane_Prediction_Model
+Model: Partial Least Squares Regression (PLS)
+Features: 232 NIR wavelength amplitudes
+Target: Total Sugar (TS%)
+Pre-processing: Standardization + IQR outlier removal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Grades based on TS%:
+Grade	TS Range
+A       Above 41.69
+B	34.24 - 41.69
+C	17.4  - 34.24
+D	4.76  - 17.4
+E	Below 4.76
 
-## Deploy on Vercel Platform
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧩 Tech Stack
+Layer	Tech
+Frontend	React + JavaScript
+Backend API	FastAPI (Python)
+ML Inference	Scikit-learn + PLS Model
+Web UI		Gradio (for TS prediction)
+Database	Convex
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+📜 License
+This project is licensed under the MIT License.
