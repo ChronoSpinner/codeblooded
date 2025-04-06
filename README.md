@@ -64,11 +64,11 @@ In the sugar industry, farmers are often underpaid due to lack of quality measur
 
 | Layer       | Tech Used                     |
 |-------------|-------------------------------|
-| Frontend    | React + JavaScript            |
-| Backend     | FastAPI (Python)              |
+| Frontend    | Next.js + TypeScript          |
+| Backend     | Firebase                      |
 | ML Inference| Scikit-learn (PLS Regression) |
 | ML UI       | Gradio                        |
-| Database    | Convex                        |
+| Database    | Firestore                     |
 | Hosting     | Vercel                        |
 
 ---
