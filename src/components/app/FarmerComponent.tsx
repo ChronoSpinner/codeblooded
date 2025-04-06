@@ -45,6 +45,7 @@ import {
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { MONTHLY_PRODUCTION, MONTHLY_REVENUE, PRODUCT_DISTRIBUTION } from '../constants';
 
 // Form schema for listing sugarcane
 const formSchema = z.object({
