@@ -1,0 +1,60 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if the user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if the user is the owner of the document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Rules for farmer listings collection
+    match /farmerListings/{listingId} {
+      // Allow read if the user is authenticated
+      // This enables customers to view available listings
+      allow read: if isAuthenticated();
+      
+      // Allow create if the user is authenticated and sets themselves as the farmer
+      allow create: if isAuthenticated() && 
+                     request.resource.data.farmerId == request.auth.uid;
+      
+      // Allow update if the user is the owner (farmer) or updating specific fields as a customer
+      allow update: if isOwner(resource.data.farmerId) || 
+                     (isAuthenticated() && 
+                      request.resource.data.diff(resource.data).affectedKeys()
+                        .hasOnly(['status', 'buyer', 'revenue']));
+      
+      // Allow delete only if the user is the owner
+      allow delete: if isOwner(resource.data.farmerId);
+    }
+    
+    // Rules for mill products collection
+    match /millProducts/{productId} {
+      // Allow read if the user is authenticated
+      // This enables customers to view available products
+      allow read: if isAuthenticated();
+      
+      // Allow create if the user is authenticated and sets themselves as the producer
+      allow create: if isAuthenticated() && 
+                     request.resource.data.producerId == request.auth.uid;
+      
+      // Allow update if the user is the owner (producer) or updating specific fields as a customer
+      allow update: if isOwner(resource.data.producerId) || 
+                     (isAuthenticated() && 
+                      request.resource.data.diff(resource.data).affectedKeys()
+                        .hasOnly(['status', 'quantity']));
+      
+      // Allow delete only if the user is the owner
+      allow delete: if isOwner(resource.data.producerId);
+    }
+    
+    // Default deny for all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
